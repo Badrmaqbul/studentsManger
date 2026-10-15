@@ -68,9 +68,9 @@ The program runs until it is terminated manually (`Ctrl + C`).
 
 ```
 number>> 1
-Enter student name: Alice
+Enter student name: Badr
 Enter student grade: 90
-Alice GRADE 90.0 added as number 0
+Badr GRADE 90.0 added as number 0
 ```
 
 ## Implementation Notes
@@ -78,20 +78,3 @@ Alice GRADE 90.0 added as number 0
 - Students are stored in two parallel fixed-size arrays (`studentsNames` and `studentsGrades`) with a capacity of 100, plus a counter (`studentsNumber`).
 - All data lives in memory only; nothing is saved when the program exits.
 - Each menu action is implemented as its own static method: `addStudent`, `showStudents`, `studentsInfo`, and `studentGradesAverage`.
-
-## Known Limitations
-
-This is a learning project, and the following points are documented as areas for improvement:
-
-- **Average calculation:** `studentGradesAverage()` iterates over `studentsNumber + 1` entries and divides by `studentsNumber + 1`, so it includes one unused (zero) slot and returns a value lower than the true average.
-- **Lookup (option 2):** the entered index is not range-checked, and non-integer input there is not caught.
-- **Grade input:** grades are read as integers (`nextInt`), so decimal values are not accepted.
-- **No exit option** and **no persistent storage** (file or database).
-
-## Possible Future Work
-
-- Fix the average calculation and add bounds checking for lookups.
-- Add an explicit exit option to the menu.
-- Replace the parallel arrays with a `Student` class and an `ArrayList<Student>`.
-- Persist data to a file.
-- Add unit tests (e.g., JUnit).
