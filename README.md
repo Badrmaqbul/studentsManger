@@ -1,4 +1,4 @@
-# Student Grade Manager
+# Student Manager
 
 A command-line application written in Java for recording students and their grades and for computing basic statistics. It was built as an academic exercise in core Java: static data structures, loops, console input handling, and exception handling.
 
